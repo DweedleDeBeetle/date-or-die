@@ -1,0 +1,214 @@
+[gd_scene load_steps=33 format=3 uid="uid://b7x2nmg8hesnf"]
+
+[ext_resource type="Script" path="res://Script/typing_background_(1).gd" id="1_eefbh"]
+[ext_resource type="Texture2D" uid="uid://c6coikjxu0mag" path="res://assets/aquarium_dither.jpg" id="1_y3dyj"]
+[ext_resource type="Texture2D" uid="uid://blgj2l483shje" path="res://assets/RC/rc overalls skin tone 1.png" id="2_0o3wd"]
+[ext_resource type="PackedScene" uid="uid://dmc0q5fqvb1ro" path="res://scenes/typing.tscn" id="2_oqss7"]
+[ext_resource type="Texture2D" uid="uid://fbdl5faliy13" path="res://assets/arcade_dither.jpg" id="3_aj7ri"]
+[ext_resource type="Texture2D" uid="uid://djwfwq4fgjtdx" path="res://assets/RC/rc overalls skin tone 2.png" id="3_ddcbn"]
+[ext_resource type="Texture2D" uid="uid://cype27pllm4gn" path="res://assets/RC/rc overalls skin tone 3.png" id="4_n6wbo"]
+[ext_resource type="Texture2D" uid="uid://c2w75ky3yyyp3" path="res://assets/dither_it_union.jpg" id="4_ta6ug"]
+[ext_resource type="Texture2D" uid="uid://blqb4wgrad5hc" path="res://assets/RC/rc overalls skin tone 4.png" id="5_7n6pe"]
+[ext_resource type="Texture2D" uid="uid://nx8m6yc4587k" path="res://assets/RC/cassidy.png" id="6_0jdbl"]
+[ext_resource type="Texture2D" uid="uid://c3b78wf55n2di" path="res://assets/RC/elli.png" id="7_b1e0f"]
+[ext_resource type="Texture2D" uid="uid://bqd6nm70xgq5e" path="res://assets/RC/jack.png" id="8_efpfo"]
+[ext_resource type="Texture2D" uid="uid://6u0cb36dmdrx" path="res://assets/RC/renee.png" id="9_770kc"]
+[ext_resource type="Texture2D" uid="uid://b7ldv0kb8y5ol" path="res://assets/RC/rc closed mouth.png" id="10_pfiew"]
+[ext_resource type="Texture2D" uid="uid://d3w31helj8q10" path="res://assets/RC/rc open mouth.png" id="11_52uom"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tq26d"]
+atlas = ExtResource("1_y3dyj")
+region = Rect2(0, 0, 320, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khcpp"]
+atlas = ExtResource("3_aj7ri")
+region = Rect2(0, 0, 320, 211)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4eib"]
+atlas = ExtResource("4_ta6ug")
+region = Rect2(0, 0, 320, 426)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_soejr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tq26d")
+}],
+"loop": true,
+"name": &"aquarium",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khcpp")
+}],
+"loop": true,
+"name": &"arcade",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4eib")
+}],
+"loop": true,
+"name": &"union",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwg7q"]
+atlas = ExtResource("2_0o3wd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cryco"]
+atlas = ExtResource("3_ddcbn")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqlvc"]
+atlas = ExtResource("4_n6wbo")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14tf7"]
+atlas = ExtResource("5_7n6pe")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bp4pk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwg7q")
+}],
+"loop": true,
+"name": &"RC1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cryco")
+}],
+"loop": true,
+"name": &"RC2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqlvc")
+}],
+"loop": true,
+"name": &"RC3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14tf7")
+}],
+"loop": true,
+"name": &"RC4",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ud7hq"]
+atlas = ExtResource("6_0jdbl")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbt6j"]
+atlas = ExtResource("7_b1e0f")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mrho"]
+atlas = ExtResource("8_efpfo")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vy0bc"]
+atlas = ExtResource("9_770kc")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qnkj2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ud7hq")
+}],
+"loop": true,
+"name": &"Cassidy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbt6j")
+}],
+"loop": true,
+"name": &"Elli",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mrho")
+}],
+"loop": true,
+"name": &"Jack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vy0bc")
+}],
+"loop": true,
+"name": &"Renee",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_am133"]
+atlas = ExtResource("10_pfiew")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqpka"]
+atlas = ExtResource("11_52uom")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xhkmo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_am133")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqpka")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_eefbh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(238, 106)
+scale = Vector2(4.06562, 3.715)
+sprite_frames = SubResource("SpriteFrames_soejr")
+animation = &"union"
+
+[node name="RC" type="Node2D" parent="."]
+position = Vector2(501.735, 77.675)
+scale = Vector2(6.295, 6.295)
+
+[node name="RCSkin" type="AnimatedSprite2D" parent="RC"]
+sprite_frames = SubResource("SpriteFrames_bp4pk")
+animation = &"RC4"
+
+[node name="RCHair" type="AnimatedSprite2D" parent="RC"]
+sprite_frames = SubResource("SpriteFrames_qnkj2")
+animation = &"Elli"
+
+[node name="RCFace" type="AnimatedSprite2D" parent="RC"]
+position = Vector2(0, -6.02)
+sprite_frames = SubResource("SpriteFrames_xhkmo")
+animation = &"closed"
+
+[node name="Typing" parent="." instance=ExtResource("2_oqss7")]
+position = Vector2(-85, -64)
