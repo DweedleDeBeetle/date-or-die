@@ -1,9 +1,46 @@
-[gd_scene load_steps=4 format=3 uid="uid://ukb1vcnojxyw"]
+[gd_scene load_steps=8 format=3 uid="uid://ukb1vcnojxyw"]
 
 [ext_resource type="Script" path="res://Script/the_end.gd" id="1_m8qwq"]
 [ext_resource type="FontFile" uid="uid://cj5bq560bramy" path="res://assets/ldfcomicsans-font/Ldfcomicsans-jj7l.ttf" id="2_0fxka"]
+[ext_resource type="Texture2D" uid="uid://lptuln7cvsvs" path="res://assets/girlboss.jpg" id="3_y3j5x"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_6mrm7"]
+
+[sub_resource type="Animation" id="Animation_oh853"]
+resource_name = "girlboss"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ihp1e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rwfjg"]
+_data = {
+"RESET": SubResource("Animation_ihp1e"),
+"girlboss": SubResource("Animation_oh853")
+}
 
 [node name="the end" type="Node2D"]
 script = ExtResource("1_m8qwq")
@@ -25,10 +62,23 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
-offset_right = 1922.0
-offset_bottom = 953.0
+offset_left = -3.0
+offset_top = 48.0
+offset_right = 1919.0
+offset_bottom = 1001.0
 theme_override_fonts/font = ExtResource("2_0fxka")
 theme_override_font_sizes/font_size = 48
 text = "Thanks for playing"
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(952, 565)
+scale = Vector2(1.59, 1.601)
+texture = ExtResource("3_y3j5x")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rwfjg")
+}

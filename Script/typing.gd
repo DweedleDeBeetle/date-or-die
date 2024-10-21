@@ -49,8 +49,8 @@ var text_list_three = ["Heyyo!","Hey howdy hey! What made you decide to have our
 	"for(int i = 0; i <= 500; i += 100) {\nfill(8,199,255);\nJust kidding.","...I love you.","Sweet! I love you too!",
 	"Yippee! Huzzah!","                        "]
 var the_script = [text_list_one,text_list_two,text_list_three]
-var now_list = 0
-var text_index = 0
+var now_list = 2
+var text_index = 25
 var typeable = false
 var minute_time = 5
 var once_please = false
@@ -73,11 +73,11 @@ func _process(delta):
 		$fade.play("fadein")
 		faded -= delta
 		if faded <=0:
-			text_index = 0
 			faded = 1
 			if now_list != 2:
 				now_list+=1
-			if now_list == 2:
+				text_index = 0
+			if now_list == 2 and text_index > 2:
 				get_tree().change_scene_to_file("res://scenes/the_end.tscn")
 	if text_index == 0 and once_please == false:
 		$fade.play("fadeout")
